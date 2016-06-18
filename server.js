@@ -2,7 +2,7 @@ var express = require('express');
 var path = require('path');
 
 var PORT = 4200;
-var PATH = path.join(__dirname, '..', 'dist');
+var PATH = path.join(__dirname, 'build');
 
 var app = express();
 

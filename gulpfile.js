@@ -1,6 +1,5 @@
 var browserSync = require('browser-sync').create();
 var gulp = require('gulp');
-var eslint = require('gulp-eslint');
 var nodemon = require('gulp-nodemon');
 var pug = require('gulp-pug');
 var puglint = require('gulp-pug-lint');
@@ -8,9 +7,8 @@ var sass = require('gulp-sass');
 var sasslint = require('gulp-sass-lint');
 
 var PATHS = {
-  eslint: "**/*.js",
-  sass: "src/assets/styles/**/*.sass",
-  pug: "src/views/*.pug"
+  sass: "src/styles/**/*.sass",
+  pug: "src/views/**/*.pug"
 };
 
 gulp.task('serve', ['nodemon', 'sass', 'pug'], function() {
@@ -27,14 +25,14 @@ gulp.task('build', ['sass', 'pug']);
 gulp.task('pug', function() {
   return gulp.src(PATHS.pug)
     .pipe(pug())
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('sass', function() {
   return gulp.src(PATHS.sass)
     .pipe(sass({outputStyle: 'compressed'}))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
 });
 
@@ -52,9 +50,10 @@ gulp.task('lint-sass', function() {
     .pipe(sasslint.failOnError());
 });
 
+
 gulp.task('nodemon', function() {
   nodemon({
-    script: './src/server.js'
+    script: './server.js'
   });
 });
 
