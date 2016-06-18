@@ -21,6 +21,7 @@
   "homepage": "https://github.com/lpan/static-site-boilerplate#readme",
   "author": "Lawrence Pan <lawrencefeipan@gmail.com>",
   "devDependencies": {
+    "babel-eslint": "^6.0.4",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.9.0",
     "browser-sync": "^2.12.10",
