@@ -1,8 +1,7 @@
 {
-  "name": "sexxi.xyz",
+  "name": "static-site-boilerplate",
   "version": "0.0.0",
-  "description": "A very sexxi website for SEXXIs",
-  "main": "index.js",
+  "description": "Boilerplate code for static websites with sass and pug",
   "scripts": {
     "start": "gulp serve",
     "start:prod": "sudo systemctl start sexxi.xyz",
@@ -16,30 +15,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/UWaterlooSE2021/sexxi.xyz.git"
+    "url": "git+https://github.com/lpan/static-site-boilerplate.git"
   },
-  "keywords": [
-    "waterloo",
-    "software",
-    "engineering",
-    "university",
-    "2021"
-  ],
-  "author": "University of Waterloo Software Engineering Class of 2021",
-  "contributors": [
-    "Lawrence Pan <lawrencefeipan@gmail.com>",
-    "Clive Chan <cc@clive.io>"
-  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/UWaterlooSE2021/sexxi.xyz/issues"
+    "url": "https://github.com/lpan/static-site-boilerplate/issues"
   },
-  "homepage": "https://github.com/UWaterlooSE2021/sexxi.xyz#readme",
+  "homepage": "https://github.com/lpan/static-site-boilerplate#readme",
+  "author": "Lawrence Pan <lawrencefeipan@gmail.com>",
   "devDependencies": {
     "browser-sync": "^2.12.10",
     "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
-    "gulp-nodemon": "^2.0.7",
     "gulp-pug": "^3.0.3",
     "gulp-pug-lint": "^0.1.6",
     "gulp-sass": "^2.3.1",
